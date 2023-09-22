@@ -4,7 +4,7 @@ import React, { ButtonHTMLAttributes, forwardRef } from 'react';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, className, disabled, type = 'button' }, ref) => {
+  ({ children, className, disabled, type = 'button', ...props }, ref) => {
     return (
       <button
         className={cn(
@@ -12,6 +12,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         ref={ref}
+        {...props}
       >
         {children}
       </button>
