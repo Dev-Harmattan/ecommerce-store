@@ -13,9 +13,9 @@ export const Info: React.FC<InfoProps> = ({ data }) => {
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
       <div className="mt-3 flex items-end justify-between">
-        <p className=" text-2xl text-gray-900">
+        <div className=" text-2xl text-gray-900 inline-block">
           <Currency value={data?.price} />
-        </p>
+        </div>
       </div>
       <hr className="my-4" />
       <div className="flex flex-col gap-4">
@@ -32,7 +32,7 @@ export const Info: React.FC<InfoProps> = ({ data }) => {
         </div>
       </div>
       <div className="flex items-center gap-x-3 mt-10">
-        <Button className='flex items-center gap-x-2'>
+        <Button className="flex items-center gap-x-2">
           Add To Cart
           <ShoppingCart />
         </Button>

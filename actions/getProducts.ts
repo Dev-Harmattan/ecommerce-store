@@ -20,7 +20,6 @@ export const getProducts = async (query: Query): Promise<Product[]> => {
       isFeatured: query.isFeatured,
     },
   });
-  console.log(url);
   const response = await fetch(url, { cache: 'no-store' });
 
   return response.json();
