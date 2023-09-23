@@ -10,7 +10,7 @@ import { CartItem } from './components/cart-item';
 
 export const revalidate = 0;
 
-export const CartPage = () => {
+const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
 
